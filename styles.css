@@ -1,0 +1,263 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Base */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #e3f2fd;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    
+}
+
+/* En-tête */
+.custom-header {
+    background-color: #031031; 
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+} 
+
+/* Pied de page */
+.custom-footer {
+    background-color: #1e3a8a; 
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Navigation */
+.custom-nav {
+    background-color: #1e3a8a; 
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f0db4f;
+}
+
+/* Titres */
+h2, h3, h4 {
+    color: #031031;
+    font-weight: 600;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Cartes de services */
+.card {
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.card ul {
+    padding-left: 1.2rem;
+}
+
+/* Boîte de service (optionnel si encore utilisé) */
+.service-box {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-box:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+/* Boutons personnalisés */
+.btn-primary {
+    background-color: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #16337b;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.logo-img {
+    height: 80px;
+    max-height: 100px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.brand-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 60px;
+    }
+
+    .brand-text {
+        font-size: 1.5rem;
+    }
+}
+.section-about {
+    background-color: #f5faff; /* bleu très clair */
+}
+
+.section-services {
+    background-color: #e6f0ff; /* bleu-gris doux */
+}
+
+.section-rdv {
+    background-color: #fff8f0; /* beige pâle pour ressortir le calendrier */
+}
+
+.section-contact {
+    background-color: #f0f4f8; /* gris très clair bleuté */
+}
+/* Styles pour les tarifs */
+.price-amount {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.price-duration {
+    opacity: 0.9;
+    font-size: 0.85rem;
+}
+
+.tarif-box {
+    transition: all 0.3s ease;
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+.card:hover .tarif-box {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .price-amount {
+        font-size: 1.2rem;
+    }
+    .vr {
+        display: none; /* Cache le séparateur sur mobile */
+    }
+    .d-flex {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+}
+/* Badge consultation gratuite */
+.consultation-badge {
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, 0) scale(1); }
+    50% { transform: translate(-50%, 0) scale(1.05); }
+    100% { transform: translate(-50%, 0) scale(1); }
+}
+
+/* Ajustement des cartes avec badge */
+.card-with-badge {
+    position: relative;
+    overflow: visible;
+}
+
+.card-body-with-badge {
+    padding-top: 2rem !important;
+}
+
+/* Styles des tarifs */
+.tarif-box {
+    transition: all 0.3s ease;
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+.price-amount {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.price-duration {
+    opacity: 0.9;
+    font-size: 0.85rem;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .consultation-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem !important;
+    }
+    
+    .price-amount {
+        font-size: 1.2rem;
+    }
+    
+    .vr {
+        display: none;
+    }
+    
+    .d-flex {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+}
